@@ -1,0 +1,104 @@
+.home{
+	position: relative; 
+	margin: 0 auto;
+	width: 100%;
+	overflow:hidden;
+	min-height:100%;
+}
+
+arrow-down{ 
+	position: absolute; 
+	width:60px;
+	height:30px;
+	left:50%;
+	margin-left:-30px;
+	bottom:40px;
+	z-index: 200; 
+	text-align:center;
+}
+.arrow-down a{ 
+	text-align:center;
+	font-family: 'FontAwesome';
+	font-size:24px;
+	line-height:30px;
+	color:#000;
+}
+.arrow-down a::before,
+.arrow-down a::after  {
+	position: absolute;
+	text-align:center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	border: 1px solid #000;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.arrow-down a::after  {
+	border-color: #000;
+	text-align:center;
+	opacity: 0;
+	-webkit-transform: translateY(-7px) translateX(6px);
+	-moz-transform: translateY(-7px) translateX(6px);
+	transform: translateY(-7px) translateX(6px);
+}
+
+.arrow-down a:hover::before,
+.arrow-down a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(5px) translateX(-5px);
+	-moz-transform: translateY(5px) translateX(-5px);
+	transform: translateY(5px) translateX(-5px);
+}
+
+.arrow-down a:hover::after,
+.arrow-down a:focus::after  {
+	opacity: 1;
+	-webkit-transform: translateY(0px) translateX(0px);
+	-moz-transform: translateY(0px) translateX(0px);
+	transform: translateY(0px) translateX(0px);
+}
+
+
+
+
+.big-text { 
+	position: absolute; 
+	left:0;
+	top:50%;
+	margin-top:-75px;
+	width:100%;
+	font-family: 'GentonaHeavy';
+	color:#000;
+	letter-spacing:4px; 
+	text-transform:uppercase;
+	text-align:center;
+	font-size:75px; 
+	line-height:75px;
+	z-index: 200; 
+}
+.thin-text { 
+	position: absolute; 
+	left:0;
+	top:50%;
+	margin-top:45px;
+	width:100%;
+	font-family: 'GentonaLight';
+	letter-spacing:3px; 
+	text-transform:uppercase;
+	text-align:center;
+	font-size:30px; 
+	line-height:30px;
+	z-index: 200; 
+}
+.thin-text span{ 
+	background:rgba(255,255,255,.8);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:8px;
+	padding-bottom:10px;
+}
